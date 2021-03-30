@@ -7,11 +7,11 @@ import numpy as np
 import pandas as pd
 
 import dnd_builder as db
-from keep_alive import keep_alive
+# from keep_alive import keep_alive
 
 pd.set_option('display.max_colwidth', None)
 
-keep_alive()
+# keep_alive()
 description = 'dnd builder bot'
 TOKEN = os.getenv('TOKEN')
 
