@@ -213,7 +213,6 @@ async def _create_char(ctx):
     rce = await bot.wait_for('message', check = check)
     race = rce.content
     if race.lower().replace(' ', '') not in rec_races:
-        qn1 = 'race not recognised, do you wish to continue (y or n)?'
         await ctx.send('race not recognised, try again')
         answer1 = await bot.wait_for('message', check = check)
         answer1 = answer1.content
@@ -228,7 +227,7 @@ async def _create_char(ctx):
     ch_clss = ch_clss.content
     while ch_clss.lower() not in rec_classes:
         await ctx.send('accepted classes are')
-        await ctx.send(*rec_classes)
+        await ctx.send(rec_classes)
         await ctx.send('try again')
         ch_clss = await bot.wait_for('message', check = check)
         ch_clss = ch_clss.content
@@ -324,14 +323,14 @@ async def _create_char(ctx):
     message = message + '\naccepted skills are'
     await ctx.send(message)
     await ctx.send(rec_skills)
-    await ctx.send('will stop if no input after 30secs,\nInput at least 1 and no more than 6')
+    await ctx.send('will stop when you enter the word stop,\nInput at least 1 and no more than 6')
     prof = []
     input_val = 'no'
     i=0
-    while (input_val.lower() != '') & (i<6):
+    while (input_val.lower() != 'stop') & (i<6):
         prof.append(input_val)
         await ctx.send('enter skill proficiency:')
-        input_val = await bot.wait_for('message', check = check, timeout=30)
+        input_val = await bot.wait_for('message', check = check)
         input_val = input_val.content
         i += 1
         

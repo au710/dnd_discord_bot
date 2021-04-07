@@ -235,11 +235,11 @@ class player_character():
         string +=  '\n'.join('%s : %s' % (k.capitalize(),self.skills[k]) 
                              for k in self.skills.keys()) 
 
-        string += f'\nInitiative: {self.initiative}, proficiency bonus: {self.proficiency_bonus}\n'
+        string += f'\n\nInitiative: {self.initiative}, proficiency bonus: {self.proficiency_bonus}'
         string += f'\n\nSpellcasting ability: {self.spell_ability}, spell save dc: {self.spell_save}, spell attack: {self.spell_attack}'
-        string = f'\n Skill Proficincies:\n'
-        string +=  '\n'.join('%s : %s' % (k.capitalize(),self.proficiencies[k]) 
-                             for k in self.skills.keys()) 
+        string += f'\n Skill Proficincies:\n'
+        string +=  ', '.join('%s' % (k.capitalize()) 
+                             for k in self.proficiencies)
 
         return string
 
