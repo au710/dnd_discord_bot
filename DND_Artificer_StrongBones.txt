@@ -1,0 +1,39 @@
+name: StrongBones, race: Half Orc, class: Artificer, level: 3, max hp: 27
+
+Abilities:
+Strength : 14, Dexterity : 10, Constitution : 16, Wisdom : 8, Intelligence : 14, Charisma : 13
+
+Modifiers 
+Strength : 2, Dexterity : 0, Constitution : 3, Wisdom : -1, Intelligence : 2, Charisma : 1
+
+Saving throws: 
+Strength : 2, Dexterity : 0, Constitution : 5, Wisdom : -1, Intelligence : 4, Charisma : 1
+
+Skills: 
+Athletics : 2
+Acrobatics : 0
+Sleight of hand : 2
+Stealth : 0
+Arcana : 2
+History : 4
+Investigation : 2
+Nature : 2
+Religion : 2
+Animal handling : -1
+Insight : 1
+Medicine : -1
+Perception : -1
+Survival : -1
+Deception : 1
+Intimidation : 1
+Performance : 1
+Persuasion : 3
+Initiative: 0, proficiency bonus: 2
+
+
+Spellcasting ability: intelligence, spell save dc: 12, spell attack: 4
+ Skill Proficincies:
+Insight
+Persuasion
+Sleight of hand
+History

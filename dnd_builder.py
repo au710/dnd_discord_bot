@@ -1,5 +1,14 @@
 import numpy as np
 import re
+import random
+
+def roll_random_stats():
+    """
+    function to calculate random stats rolls
+    """
+    x = [random.randint(1,6) for x in range(0,4)]
+    tot_stat = np.sum(x)-np.min(x)
+    return tot_stat
 
 def modifier(ability_score):
     """
@@ -207,7 +216,7 @@ class player_character():
     def __str__(self):
         string = f'name: {self.name}, race: {self.race}, '
         string +=f'class: {self.clss}, level: {self.level}, max hp: {self.hitpoints}\n'
-        string += f'\nInitiative: {self.initiative}, proficiency bonus: {self.proficiency_bonus}\n\nAbilities:\n'
+        string +='\nAbilities:\n'
         string +=  ', '.join('%s : %s' % (k.capitalize(),self.ability_scores[k]) 
                              for k in self.ability_scores.keys())
         
@@ -226,8 +235,12 @@ class player_character():
         string +=  '\n'.join('%s : %s' % (k.capitalize(),self.skills[k]) 
                              for k in self.skills.keys()) 
 
+        string += f'\n\nInitiative: {self.initiative}, proficiency bonus: {self.proficiency_bonus}'
+        string += f'\n\nSpellcasting ability: {self.spell_ability}, spell save dc: {self.spell_save}, spell attack: {self.spell_attack}'
+        string += f'\n Skill Proficincies:\n'
+        string +=  ', '.join('%s' % (k.capitalize()) 
+                             for k in self.proficiencies)
 
-        string += f'\n\nSpellcasting ability: {self.spell_ability}, spell save dc: {self.spell_save}, spell attack: {self.spell_attack}' 
         return string
 
     def calculate_ability_modifiers(self):
