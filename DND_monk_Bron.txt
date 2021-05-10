@@ -1,0 +1,36 @@
+name: Bron, race: variant human, class: monk, level: 3, max hp: 21
+
+Abilities:
+Strength : 10, Dexterity : 15, Constitution : 13, Wisdom : 14, Intelligence : 12, Charisma : 8
+
+Modifiers 
+Strength : 0, Dexterity : 2, Constitution : 1, Wisdom : 2, Intelligence : 1, Charisma : -1
+
+Saving throws: 
+Strength : 2, Dexterity : 4, Constitution : 1, Wisdom : 2, Intelligence : 1, Charisma : -1
+
+Skills: 
+Athletics : 2
+Acrobatics : 2
+Sleight of hand : 2
+Stealth : 2
+Arcana : 1
+History : 1
+Investigation : 1
+Nature : 1
+Religion : 3
+Animal handling : 2
+Insight : 4
+Medicine : 2
+Perception : 2
+Survival : 2
+Deception : -1
+Intimidation : -1
+Performance : -1
+Persuasion : -1
+
+Initiative: 2, proficiency bonus: 2
+
+Spellcasting ability: wisdom, spell save dc: 12, spell attack: 4
+ Skill Proficincies:
+Athletics, Insight, Religion

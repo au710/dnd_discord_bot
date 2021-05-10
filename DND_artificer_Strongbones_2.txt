@@ -1,0 +1,36 @@
+name: Strongbones 2, race: half orc, class: artificer, level: 3, max hp: 27
+
+Abilities:
+Strength : 16, Dexterity : 14, Constitution : 17, Wisdom : 10, Intelligence : 18, Charisma : 12
+
+Modifiers 
+Strength : 3, Dexterity : 2, Constitution : 3, Wisdom : 0, Intelligence : 4, Charisma : 1
+
+Saving throws: 
+Strength : 3, Dexterity : 2, Constitution : 5, Wisdom : 0, Intelligence : 6, Charisma : 1
+
+Skills: 
+Athletics : 3
+Acrobatics : 2
+Sleight of hand : 4
+Stealth : 2
+Arcana : 6
+History : 4
+Investigation : 6
+Nature : 6
+Religion : 4
+Animal handling : 0
+Insight : 0
+Medicine : 0
+Perception : 0
+Survival : 0
+Deception : 1
+Intimidation : 3
+Performance : 1
+Persuasion : 1
+
+Initiative: 2, proficiency bonus: 2
+
+Spellcasting ability: intelligence, spell save dc: 14, spell attack: 6
+ Skill Proficincies:
+Intimidation, Sleight of hand, Arcana, Investigation, Nature

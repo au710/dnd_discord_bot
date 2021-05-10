@@ -47,7 +47,8 @@ async def sum_roll(ctx, number_of_dice: int, number_of_sides: int):
     dice = [(random.choice(range(1, number_of_sides + 1)))
             for _ in range(number_of_dice)]
     sum_dice = np.sum(dice)
-    await ctx.send(str(sum_dice))
+    await ctx.send('results rolled: {}'.format(dice))
+    await ctx.send('total: {}'.format(str(sum_dice)))
 
 
 @bot.command(name='sum_dnd_dice',
@@ -90,7 +91,9 @@ async def dnd_roll(ctx,
         d4_roll = [0]
     sum_all = np.sum(
         [*d20_roll, *d12_roll, *d10_roll, *d8_roll, *d6_roll, *d4_roll])
-    await ctx.send(str(sum_all))
+    await ctx.send('d20 roll: {}, d12 roll: {}, d10_roll: {},'.format(d20_roll, d12_roll, d10_roll))
+    await ctx.send('d8_roll: {}, d6 roll: {}, d4 roll: {}'.format(d8_roll, d6_roll, d4_roll))
+    await ctx.send('total sum of dice:{}'.format(str(sum_all)))
 
 
 @bot.command(name='make_char', help='make raw char using stats')
@@ -375,5 +378,12 @@ async def _create_char(ctx):
     with open(filename, "rb") as file:
         await ctx.send('\nsaved in file:', file=discord.File(file, filename))
 
+@bot.command(name="roll_stats", help='roll random stats using Matt mercers rules')
+async def _roll_stats(ctx):
+    avail_stats = [db.roll_random_stats() for x in range(0,6)]
+    if np.sum(avail_stats) < 70:
+        while np.sum(avail_stats) < 70 & np.sum(avail_stats) > 75 :
+            avail_stats = [db.roll_random_stats() for x in range(0,6)]
+    await ctx.send('Rolled stats are: {}'.format(avail_stats))
 
 bot.run(TOKEN)
